@@ -4,6 +4,7 @@ const good = <Foo
     dar={"far"}
 />;
 
+    
     const alsoGood = <Foo
         star
         mar={52}
