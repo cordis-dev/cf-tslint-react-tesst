@@ -1,12 +1,12 @@
 const good = <Foo
     bar="car"
-    car
+    car={true}
     dar={"far"}
 />;
 
     
     const alsoGood = <Foo
-        star
+        star={true}
         mar={52}
     />
 
@@ -27,7 +27,7 @@ function goodRender() {
             />
             <Element
                 charlie={3}
-                delta
+                delta={true}
             >
                 {children}
             </Element>
@@ -35,19 +35,19 @@ function goodRender() {
     );
 }
 
-const bad = <Foo bar
+const bad = <Foo bar={true}
                  ~~~ [JSX attributes must be on a line below the opening tag]
                  car
 />;
 
     const alsoBad = <Foo
-        bar
-        car />;
+        bar={true}
+        car={true} />;
             ~   [Tag closing must be on its own line and aligned with opening of tag]
 
 function badRender() {
     return (
-        <div aar
+        <div aar={true}
              ~~~ [JSX attributes must be on a line below the opening tag]
             bar={0} car={0}
             ~~~~~~~         [JSX attributes must be on their own line and vertically aligned]
